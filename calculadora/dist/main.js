@@ -6,5 +6,7 @@ async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     await app.listen(process.env.PORT ?? 3000);
 }
-bootstrap();
+bootstrap()
+    .then(() => console.warn('Server is running!'))
+    .catch((err) => console.error('Error starting server:', err));
 //# sourceMappingURL=main.js.map
