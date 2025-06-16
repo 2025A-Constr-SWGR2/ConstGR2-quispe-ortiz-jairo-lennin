@@ -19,11 +19,9 @@ jobs:
         run: |
           npm install
 
-      - name: Ejecutar lint (ignorar fallos)
+      - name: Ejecutar lint
         working-directory: ./calculadora
         run: |
-          npm run lint || echo "Lint fallido - ignorando" && exit 0  # Fuerza éxito
+          npm run lint
 
-      - name: Marcar como exitoso
-        if: always()
-        run: echo "Workflow completado (lint ignorado si falló)"
+          
