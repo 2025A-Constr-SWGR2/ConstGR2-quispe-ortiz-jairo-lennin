@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   lint:
-    runs-on: [self-hosted]
+    runs-on: ubuntu-latest  # Cambiado de self-hosted a ubuntu-latest
     steps:
       - name: Descargar el repo
         uses: actions/checkout@v4
@@ -18,10 +18,7 @@ jobs:
         working-directory: ./calculadora
         run: |
           npm install
-
       - name: Ejecutar lint
         working-directory: ./calculadora
         run: |
           npm run lint
-
-          
