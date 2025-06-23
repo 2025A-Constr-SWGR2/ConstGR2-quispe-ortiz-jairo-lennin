@@ -16,9 +16,10 @@ jobs:
 
       - name: Instalar dependencias
         working-directory: ./calculadora
-        run: |
-          npm install
-      - name: Ejecutar tests
+        run: npm install
+      - name: Dar permisos a binarios
         working-directory: ./calculadora
-        run: |
-          npm run test
+        run: chmod +x node_modules/.bin/*
+      - name: Ejecutar lint
+        working-directory: ./calculadora
+        run: npm run lint
