@@ -3,7 +3,7 @@ run-name: Build nodejs app
 on: [push]
 jobs:
   build:
-    runs-on: ubuntu-latest  # Cambiado de [self-hosted] a ubuntu-latest
+    runs-on: [self-hosted]
     steps:
       - name: Descargar el repo
         uses: actions/checkout@v4
@@ -15,7 +15,8 @@ jobs:
         working-directory: ./calculadora
         run: |
           npm install
-      - name: Compilar 
+      - name: Compilar
         working-directory: ./calculadora
         run: |
           npm run build
+ 

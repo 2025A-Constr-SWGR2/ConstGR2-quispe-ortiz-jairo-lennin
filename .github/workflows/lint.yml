@@ -1,24 +1,24 @@
 name: Node Lint
-run-name: Lint nodejs app
+run-name: Lint node.js App
+
 on: [push]
 
 jobs:
   lint:
-    runs-on: ubuntu-latest  # Cambiado de self-hosted a ubuntu-latest
+    runs-on: [self-hosted]
     steps:
-      - name: Descargar el repo
+      - name: Descargar el repositorio
         uses: actions/checkout@v4
 
-      - name: Usar nodejs
+      - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22.x'
+          node-version: "22.x"
 
       - name: Instalar dependencias
         working-directory: ./calculadora
-        run: |
-          npm install
-      - name: Ejecutar lint
+        run: npm install
+
+      - name: Ejecutar Linter
         working-directory: ./calculadora
-        run: |
-          npm run lint
+        run: npm run lint
