@@ -1,0 +1,15 @@
+
+{
+  "name": "2025a-swgr2-jq-rg-suma",
+  "version": "1.0.0",
+  "description": "suma",
+  "license": "ISC",
+  "author": "Jairo Quispe y Rene Guzman",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
+
+
